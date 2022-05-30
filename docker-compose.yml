@@ -1,0 +1,13 @@
+version: '3.6'
+services:
+  filebench:
+    image: centos/filebench
+    container_name: filebench
+    restart: always
+    environment:
+      - TZ=Sweden/Stockkholm
+    volumes:
+      - filebench_data:/var/lib/filebench
+
+volumes:
+   filebench_data: {}
